@@ -1,0 +1,16 @@
+<form action="/craftingcalc/login" method="POST">
+    {% csrf_token %}
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+  <label for="id_user">First name:</label>
+  <input type="text" id="id_user" name="username"><br><br>
+  <label for="id_password">Last name:</label>
+  <input type="password" id="id_password" name="password"><br><br>
+  <input type="submit" value="Submit">
+    {% if login_failed%}
+    <p> Incorrect</p>
+
+    {% endif %}
+
+</form>

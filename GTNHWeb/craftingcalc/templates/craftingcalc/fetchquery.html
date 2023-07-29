@@ -1,0 +1,12 @@
+{% if queries %}
+
+    <div>
+    {% for query in queries %}
+        <div>
+        <p>{{ query.query_item }} {{ query.amount }}</p>
+            </div>
+    {% endfor %}
+    </div>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
